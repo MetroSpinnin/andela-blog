@@ -1,0 +1,152 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body{
+    background:rgb(241, 245, 254);
+}
+
+/**
+* Styling for the Navigation Menu
+*/
+
+.navbar{
+    display: flex;
+    justify-content: flex-end;
+    background: #104e8b;
+    color: rgb(241, 245, 254);
+}
+
+.navbar .main-nav{
+    list-style: none;
+    position: relative;
+}
+
+.main-nav li{
+    position: relative;
+    display: inline-block;
+    height: 50px;
+    background:#104e8b;
+    color:rgb(241, 245, 254);
+}
+
+.main-nav li a{
+    background: #104e8b;
+    color: rgb(241, 245, 254);
+    display: block;
+    height: 100%;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.main-nav li a:hover{
+    background:rgb(241, 245, 254);
+    color:#104e8b;
+    transition: 0.2s ease-in;
+}
+
+
+/**
+* Styling for the Footer
+*/
+
+.footer{
+    display: flex;
+    justify-content: center;
+    background: #104e8b;
+    color:rgb(241, 245, 254);
+    padding:20px;
+}
+
+/**
+* Styling for the Homepage
+*/
+
+.home-container{
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 2rem;
+    justify-content: space-around;
+    margin:50px;
+}
+
+.home-container img{
+    height: 200px;
+}
+
+/**
+* Styling for the main container that
+* would hold the items in a grid format
+*/
+
+.grid-container{
+    display: grid;
+    margin:30px;
+    grid-template-columns: 1fr 1fr 0.1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+            "one two . four"
+            "three four .four"
+            "five six . four";
+    grid-gap: 1rem;
+    justify-content: space-between;
+}
+
+.grid-container p {
+    margin: 10px;
+}
+
+.grid-container p a{
+    display: grid;
+    justify-content: flex-start;
+    text-decoration: none;
+    background: rgb(241, 245, 254);
+    color:#104e8b;
+    padding: 6px;
+    margin:3px;
+}
+
+.one{
+    display: grid;
+    order:one;    
+    border:1px solid lavender;
+    background:white;
+}
+
+.two{
+    display: grid;
+    order:two;
+    border:1px solid lavender;
+    background:white;
+}
+
+.three{
+
+}
+
+.four{
+    display: grid;
+    order:four;
+    border:1px solid lavender;
+    background:white;
+}
+
+.five{
+    display: grid;
+    order:five;
+    border:1px solid lavender;
+    background:white;
+}
+
+.six{
+    display: grid;
+    order:six;
+    border:1px solid lavender;
+    background:white;
+}
