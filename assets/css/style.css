@@ -70,14 +70,69 @@ body{
 .home-container{
     display: grid;
     grid-template-columns: 2fr 4fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows:1fr;
     grid-gap: 2rem;
-    justify-content: space-around;
-    margin:50px;
+    justify-content:flex-start;
+    margin:80px;
 }
 
 .home-container img{
-    height: 200px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+.grid-container1{
+    display: grid;
+    margin:30px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+            "one1 two1 three1 four1";
+    grid-gap: 1rem;
+    justify-content: space-between;
+}
+
+
+.grid-container1 p {
+    margin: 10px;
+}
+
+.grid-container1 p a{
+    display: grid;
+    justify-content: flex-start;
+    text-decoration: none;
+    background: rgb(241, 245, 254);
+    color:#104e8b;
+    padding: 6px;
+    margin:3px;
+}
+
+.one1{
+    display: grid;
+    order:one;    
+    border:1px solid lavender;
+    background:white;
+}
+
+.two1{
+    display: grid;
+    order:two;
+    border:1px solid lavender;
+    background:white;
+}
+
+.three1{
+    display: grid;
+    order:three;
+    border:1px solid lavender;
+    background:white;
+}
+
+.four1{
+    display: grid;
+    order:four;
+    border:1px solid lavender;
+    background:white;
 }
 
 /**
@@ -149,4 +204,57 @@ body{
     order:six;
     border:1px solid lavender;
     background:white;
+}
+
+/**
+* Contact Page
+*/
+
+.home-container1{
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+    grid-template-rows:1fr;
+    grid-gap: 2rem;
+    justify-content:flex-start;
+    margin:80px;
+}
+
+.home-container1 img{
+    height: 300px;
+    border-radius: 50%;
+}
+
+.home-container1 ul li a{
+    text-decoration: none;
+    color:#104e8b;
+}
+
+/**
+* Media queries for responsiveness
+*/
+
+@media screen and (max-width:992px){
+    .home-container1{
+        display: flex;
+        flex-wrap: wrap;
+        flex:50%;
+    }
+
+    .grid-container1{
+        display: flex;
+        flex-wrap: wrap;
+        flex:50%;
+    }
+
+    .grid-container{
+        display: flex;
+        flex-wrap: wrap;
+        flex:50%;
+    }
+
+    .home-container{
+        display:flex;
+        flex-wrap: wrap;
+        flex:50%;
+    }
 }
