@@ -138,8 +138,20 @@ body{
 /**
 * Styling for the main container that
 * would hold the items in a grid format
+* for archives page
 */
 
+.default{
+    display:block;
+}
+
+:target{
+    display:grid;
+}
+
+:target ~ .default{
+    display: none;
+}
 .grid-container{
     display: grid;
     margin:30px;
@@ -250,6 +262,13 @@ body{
         display: flex;
         flex-wrap: wrap;
         flex:50%;
+    }
+
+    .four{
+        display: none;
+        order:four;
+        border:1px solid lavender;
+        background:white;
     }
 
     .home-container{
